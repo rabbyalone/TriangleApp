@@ -2,6 +2,8 @@
 {
     public partial class AdvanceTriangle : Form
     {
+        private List<Triangle> triangles = new List<Triangle>();
+
         int arm1X = 0;
         int arm1Y = 0;
         int arm2X = 0;
@@ -22,21 +24,19 @@
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            g.Clear(Color.Black);
 
             int x = panel1.Width / 2;
             int y = panel1.Height / 2;
 
-            for (int i = 1; i <= layer; i++)
+            foreach (var triangle in triangles)
             {
-                int offset = i * 10;
-                Point p1 = new Point(x + arm1X, y + arm1Y - offset);
-                Point p2 = new Point(x + arm2X, y + arm2Y - offset);
-                Point p3 = new Point(x + arm3X, y + arm3Y - offset);
-
-                g.DrawLine(Pens.Red, p1, p2);
-                g.DrawLine(Pens.Black, p2, p3);
-                g.DrawLine(Pens.Black, p3, p1);
+                for (int i = 1; i <= layer; i++)
+                {
+                    g.DrawPolygon(Pens.White, triangle.Points);
+                }
             }
+
 
         }
 
@@ -50,7 +50,25 @@
             arm3Y = (int)arm3Yvalue.Value;
             layer = (int)layerCount.Value;
 
+            Point[] trianglePoints = new Point[]
+            {
+                new Point(arm1X, arm1Y),
+                new Point(arm2X, arm2Y),
+                new Point (arm3X, arm3Y)
+            };
+            triangles.Add(new Triangle(trianglePoints));
+
             panel1.Invalidate();
+        }
+    }
+
+    class Triangle
+    {
+        public Point[] Points { get; set; }
+
+        public Triangle(Point[] points)
+        {
+            Points = points;
         }
     }
 }
