@@ -18,7 +18,7 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateTriangle();
+            AddTriangle();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -29,10 +29,20 @@
             int x = panel1.Width / 2;
             int y = panel1.Height / 2;
 
+            label8.Text = $"Panel Width: {panel1.Width}";
+            label9.Text = $"Panel Height: {panel1.Height}";
+            label10.Text = $"Panel Center: x: {x} y: {y}";
+
             foreach (var triangle in triangles)
             {
                 for (int i = 1; i <= layer; i++)
                 {
+                    var offset = i * 20;
+                    if (triangle.Points.Count() > i)
+                    {
+                        triangle.Points[i].Y = triangle.Points[i].Y - offset;
+                    }
+
                     g.DrawPolygon(Pens.White, triangle.Points);
                 }
             }
@@ -40,7 +50,7 @@
 
         }
 
-        private void UpdateTriangle()
+        private void AddTriangle()
         {
             arm1X = (int)arm1Xvalue.Value;
             arm1Y = (int)arm1Yvalue.Value;
@@ -60,6 +70,13 @@
 
             panel1.Invalidate();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            triangles.Clear();
+            panel1.Invalidate();
+        }
+
     }
 
     class Triangle
