@@ -1,6 +1,6 @@
 ﻿namespace TriangleApp
 {
-    partial class Form1
+    partial class BasicTriangle
     {
         /// <summary>
         ///  Required designer variable.

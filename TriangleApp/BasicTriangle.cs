@@ -1,6 +1,6 @@
 namespace TriangleApp
 {
-    public partial class Form1 : Form
+    public partial class BasicTriangle : Form
     {
         private int baseLength = 0;
         private int height = 0;
@@ -8,7 +8,7 @@ namespace TriangleApp
         private int xOffset = 0;
         private int yOffset = 0;
         private List<Triangle> triangles = new List<Triangle>();
-        public Form1()
+        public BasicTriangle()
         {
             InitializeComponent();
         }
