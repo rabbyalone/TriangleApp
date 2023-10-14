@@ -2,10 +2,12 @@ namespace TriangleApp
 {
     public partial class Form1 : Form
     {
-        private int arm1 = 0;
-        private int arm2 = 0;
-        private int arm3 = 0;
+        private int baseLength = 0;
+        private int height = 0;
         private int layer = 0;
+        private int xOffset = 0;
+        private int yOffset = 0;
+        private List<Triangle> triangles = new List<Triangle>();
         public Form1()
         {
             InitializeComponent();
@@ -20,31 +22,43 @@ namespace TriangleApp
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            int x = panel1.Width / 2;
-            int y = panel1.Height / 2;
+
 
             g.Clear(Color.White);
-
-            for (int i = 1; i <= layer; i++)
+            foreach (var item in triangles)
             {
-                Random random = new Random();
-                Pen pen = new Pen(Color.FromArgb(random.Next(255), random.Next(255), random.Next(255)));
 
-                int yOffset = i * 10;
-                Point p1 = new Point(x, y - arm1 - yOffset);
-                Point p2 = new Point(x - arm2 / 2, y + arm3 - yOffset);
-                Point p3 = new Point(x + arm2 / 2, y + arm3 - yOffset);
 
-                g.DrawLines(pen, new Point[] { p1, p2, p3, p1 });
+                for (int i = 1; i <= layer; i++)
+                {
+                    Random random = new Random();
+                    Pen pen = new Pen(Color.FromArgb(random.Next(255), random.Next(255), random.Next(255)));
+
+                    g.DrawPolygon(pen, item.Points);
+                }
             }
         }
 
         private void UpdateTriangle()
         {
-            arm1 = (int)numericUpDown1.Value;
-            arm2 = (int)numericUpDown2.Value;
-            arm3 = (int)numericUpDown3.Value;
+            baseLength = (int)numericUpDown2.Value;
+            height = (int)numericUpDown3.Value;
             layer = (int)numericUpDown4.Value;
+
+            xOffset = (int)xOffsetNumericVal.Value;
+            yOffset = (int)yOffsetNumericVal.Value;
+
+            int x = 10 + xOffset;
+            int y = 10 + yOffset;
+
+            Point[] points =
+            {
+                    new Point(x, y),
+                    new Point(x + baseLength, y),
+                    new Point(x + baseLength / 2, y - height)
+            };
+
+            triangles.Add(new Triangle(points));
 
             panel1.Invalidate();
         }
@@ -53,6 +67,12 @@ namespace TriangleApp
         {
             AdvanceTriangle advanceTriangle = new AdvanceTriangle();
             advanceTriangle.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            triangles.Clear();
+            panel1.Invalidate();
         }
     }
 }

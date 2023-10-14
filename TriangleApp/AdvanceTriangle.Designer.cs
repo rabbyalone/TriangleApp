@@ -48,6 +48,7 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)arm1Xvalue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)arm1Yvalue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)arm2Xvalue).BeginInit();
@@ -263,11 +264,22 @@
             label10.TabIndex = 19;
             label10.Text = "label10";
             // 
+            // button3
+            // 
+            button3.Location = new Point(73, 340);
+            button3.Name = "button3";
+            button3.Size = new Size(171, 23);
+            button3.TabIndex = 20;
+            button3.Text = "Draw Basic Triangle";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // AdvanceTriangle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1120, 442);
+            Controls.Add(button3);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -324,5 +336,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Button button3;
     }
 }

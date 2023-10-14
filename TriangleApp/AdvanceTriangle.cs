@@ -77,15 +77,11 @@
             panel1.Invalidate();
         }
 
-    }
-
-    class Triangle
-    {
-        public Point[] Points { get; set; }
-
-        public Triangle(Point[] points)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Points = points;
+            new Form1().Show();
         }
     }
+
+
 }
