@@ -61,6 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.WindowFrame;
             label1.Location = new Point(21, 99);
             label1.Name = "label1";
             label1.Size = new Size(46, 15);
@@ -71,6 +72,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.WindowFrame;
             label2.Location = new Point(261, 101);
             label2.Name = "label2";
             label2.Size = new Size(45, 15);
@@ -81,6 +83,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.WindowFrame;
             label3.Location = new Point(21, 157);
             label3.Name = "label3";
             label3.Size = new Size(46, 15);
@@ -91,6 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.WindowFrame;
             label4.Location = new Point(261, 213);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
@@ -101,6 +105,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.WindowFrame;
             label5.Location = new Point(21, 215);
             label5.Name = "label5";
             label5.Size = new Size(46, 15);
@@ -111,6 +116,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.WindowFrame;
             label6.Location = new Point(261, 157);
             label6.Name = "label6";
             label6.Size = new Size(45, 15);
@@ -119,6 +125,7 @@
             // 
             // arm1Xvalue
             // 
+            arm1Xvalue.ForeColor = SystemColors.WindowFrame;
             arm1Xvalue.Location = new Point(72, 95);
             arm1Xvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm1Xvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -128,6 +135,7 @@
             // 
             // arm1Yvalue
             // 
+            arm1Yvalue.ForeColor = SystemColors.WindowFrame;
             arm1Yvalue.Location = new Point(312, 97);
             arm1Yvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm1Yvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -137,6 +145,7 @@
             // 
             // arm2Xvalue
             // 
+            arm2Xvalue.ForeColor = SystemColors.WindowFrame;
             arm2Xvalue.Location = new Point(73, 155);
             arm2Xvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm2Xvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -146,6 +155,7 @@
             // 
             // arm2Yvalue
             // 
+            arm2Yvalue.ForeColor = SystemColors.WindowFrame;
             arm2Yvalue.Location = new Point(312, 155);
             arm2Yvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm2Yvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -155,6 +165,7 @@
             // 
             // arm3Xvalue
             // 
+            arm3Xvalue.ForeColor = SystemColors.WindowFrame;
             arm3Xvalue.Location = new Point(73, 207);
             arm3Xvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm3Xvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -164,6 +175,7 @@
             // 
             // arm3Yvalue
             // 
+            arm3Yvalue.ForeColor = SystemColors.WindowFrame;
             arm3Yvalue.Location = new Point(312, 207);
             arm3Yvalue.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             arm3Yvalue.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -173,6 +185,7 @@
             // 
             // button1
             // 
+            button1.ForeColor = SystemColors.WindowFrame;
             button1.Location = new Point(72, 293);
             button1.Name = "button1";
             button1.Size = new Size(171, 23);
@@ -193,6 +206,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.WindowFrame;
             label7.Location = new Point(21, 259);
             label7.Name = "label7";
             label7.Size = new Size(37, 15);
@@ -201,6 +215,7 @@
             // 
             // layerCount
             // 
+            layerCount.ForeColor = SystemColors.WindowFrame;
             layerCount.Location = new Point(72, 251);
             layerCount.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             layerCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -212,6 +227,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.ControlDark;
+            button2.ForeColor = SystemColors.WindowFrame;
             button2.Location = new Point(261, 293);
             button2.Name = "button2";
             button2.Size = new Size(171, 23);
