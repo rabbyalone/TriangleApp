@@ -14,22 +14,22 @@ basic triangle creation with offset setup.
 
 #### Authentication
 
-![](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/TriangleTest/auth.png)
+![](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/images/auth.png)
 
 **Prompt for user login using microsft login screen.**
 
-![Authentication](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/TriangleTest/auth1.png)
+![Authentication](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/images/auth1.png)
 
 #### Triangle Setup (Advance)
 
 By setting up (x1, y1), (x2, y2) and (x3, y3), we can plot triangle here, 
 drawing range of triangle is `-1000 < m < 1000`. Offset is fixed 10 in y axis.
 
-![AdvanceTriangle](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/TriangleTest/advtri.png)
+![AdvanceTriangle](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/images/advtri.png)
 
 #### Basic Triagnle
 
-![BasicTriangle](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/TriangleTest/basic.png)
+![BasicTriangle](https://raw.githubusercontent.com/rabbyalone/TriangleApp/master/images/basic.png)
 
 ## Technical 
 
