@@ -23,12 +23,9 @@ namespace TriangleApp
         {
             Graphics g = e.Graphics;
 
-
             g.Clear(Color.White);
             foreach (var item in triangles)
             {
-
-
                 for (int i = 1; i <= layer; i++)
                 {
                     Random random = new Random();
